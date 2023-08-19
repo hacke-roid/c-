@@ -15,8 +15,6 @@ int main()
         ans = (b* pow(10,i))+ ans;
         n=n>>1;
         i++;
-        
-        
     } 
 
     cout<<ans<<endl;

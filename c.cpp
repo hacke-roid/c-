@@ -3,21 +3,14 @@ using namespace std;
 
 int main()
 {
-	int a,b,c;
-	
-	
-	char ch = 'v';
-	cout << ch << endl;
+	int n;
+    cin>>n;
+    string arr[9] = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
 
-    bool bl = false;
-    cout << bl << endl;
-
-    cin >> a;
-    cin >>b;
-
-    c=a+b;
-
-    cout << c << endl;
-
-	
+    if(n<=9){
+        cout<<arr[n-1]<<endl;
+    }
+    else{
+        cout<<"Greater than 9";
+    }
 }
