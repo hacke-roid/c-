@@ -14,7 +14,7 @@ int binarySearch(int arr[], int n, int key){
         if(arr[mid] == key){
             cout<<mid;
         }
-        if(key>arr[mid])
+        if (key>arr[mid])
         {
             s=mid+1;
         }
