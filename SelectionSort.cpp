@@ -1,17 +1,19 @@
 #include<iostream>
 using namespace std;
 
-int bubbleSort(int arr[], int n){
+int SelectionSort(int arr[], int n){
     for (int i = 0; i < n; i++)
     {
+        int minIndex = i;
         for (int j = i+1; j < n; j++)
         {
-            if (arr[i]>arr[j])
+            if (arr[j]<arr[minIndex])
             {
-                swap(arr[i],arr[j]);
+                minIndex = j;
             }
             
-        } 
+        }
+        swap(arr[minIndex], arr[i]);
         
     }
     
@@ -38,6 +40,6 @@ int main()
         cin>>arr[i];
     }
 
-    bubbleSort(arr, n);
+    SelectionSort(arr, n);
     printArr(arr, n);
 }

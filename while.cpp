@@ -9,10 +9,8 @@ int main()
 
     while(i<=a){
         cout<<i<<" ";
-        
         i=i+1;
-        sum= sum+i;
-        
+        sum= sum+i; 
     }
     cout<< "Sum of number is:" <<sum;
 }

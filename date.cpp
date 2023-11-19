@@ -14,7 +14,7 @@ int findArr(int arr[], int n, int k){
         }
 
         else if(arr[mid]<k){
-            start=mid+1;
+           start=mid+1;
         }
         else if(arr[mid]>k){
             end=mid-1;
