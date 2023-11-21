@@ -1,27 +1,38 @@
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
+#include<iostream>
+using namespace std;
 
-int sumOfArr(int arr[], int n){
-    int sum=0;
+int sort(int arr[], int n){
     for(int i=0; i<n; i++){
-        sum=sum+arr[i];
+        int temp = arr[i];
+        int j;
+        for(j=i-1; j>=0; j--){
+            if(arr[j]>temp){
+                arr[j+1] = arr[j];
+            }
+            else{
+                break;
+            }
+            arr[j] = temp;
+        }
+        
     }
-    return sum;
+}
+
+int printArr(int arr[], int n){
+    for(int i=0; i<n; i++){
+        cout<<arr[i]<<" ";
+    }
 }
 
 int main() {
-
     int n;
-    scanf("%d",&n);
+    cin>>n;
     int arr[n];
-    
+
     for(int i=0; i<n; i++){
-        scanf("%d",&arr[i]);
+        cin>>arr[i];
     }
-    
-    sumOfArr(arr, n);
-    printf("%d",sumOfArr(arr,n));
-    return 0;
+
+    sort(arr, n);
+    printArr(arr, n);
 }
